@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bobbibrowncosmetics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      #header {
+        width: 100%;
+        height: 150px;
+
+        color: whitesmoke;
+        
+      }
+      #navtop {
+        width: 100%;
+        height: 90px;
+        /* border: 2px solid yellow; */
+        display: flex;
+        color: white;
+        background-color: black;
+      }
+      #navsignup {
+        width: 15%;
+        padding-top: 20px;
+        padding-left: 50px;
+        cursor: pointer;
+      }
+      #navname {
+        width: 60%;
+        font-size: 45px;
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 10%;
+      }
+      #navlogo {
+        width: 25%;
+        display: flex;
+      }
+      #navbbaccess {
+        padding-top: 20px;
+        cursor: pointer;
+      }
+      .logosmall {
+        width: 20px;
+        height: 20px;
+        padding-top: 20px;
+        padding-left: 15px;
+        cursor: pointer;
+      }
+      .logosmall:hover,
+      #navsignup:hover,
+      #navbbaccess:hover {
+        opacity: 0.8;
+      }
+      #navsearchinput {
+        width: 170px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+        border-bottom: 2px solid white;
+        color: white;
+      }
+      #navsearchinput:focus {
+        border-bottom: none;
+      }
+      #navbot {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        /* border: 2px solid yellow; */
+        background-color: black;
+        position:sticky ;
+        top:0px;
+        color: white;
+      }
+      #navoptions {
+        display: flex;
+        gap: 35px;
+        padding-left: 15px;
+        padding-top: 20px;
+        /* border: 1px solid yellow; */
+      }
+      .options:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      #holiday {
+        color: rgb(247, 114, 6);
+      }
+      #signupdiv {
+        width: 350px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        top: 50px;
+        left: 60px;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #signupform {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
+        line-height: 25px;
+      }
+      #signupform > input {
+        display: inline;
+        margin: 5px 10px 5px 0;
+        padding: 5px;
+        background-color: #fff;
+        border: 1px solid rgb(197, 197, 197);
+        margin-bottom: 10px;
+      }
+      #signupform > select {
+        width: 45%;
+        display: inline;
+        height: 30px;
+      }
+      #buttondivcont {
+        width: 100%;
+        height: 350px;
+        background-image: url(https://media.istockphoto.com/photos/makeup-cosmetics-on-red-geometric-background-with-red-cubes-picture-id1288322605?b=1&k=20&m=1288322605&s=170667a&w=0&h=ap3F0laRcH058aAaQ0JV2Kjo7jsxN7COvw3frW0pfBw=);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-top: 1px solid black;
+        padding-top: 50px;
+        margin-top: 0px;
+      }
+      #buttondivcont > h1 {
+        padding-left: 50px;
+      }
+      #buttondivcont > h3 {
+        padding-left: 50px;
+      }
+      #buttonsdiv {
+        width: 400px;
+        height: 40px;
+        /* border: 1px solid yellow; */
+        margin-left: 40px;
+        padding-top: 5px;
+        display: flex;
+      }
+      #buttonsdiv > button {
+        height: 30px;
+        margin-left: 10px;
+        width: 190px;
+        background-color: black;
+        border: none;
+        justify-content: space-between;
+        color: white;
+      }
+      button:hover {
+        opacity: 0.85;
+        cursor: pointer;
+      }
+      #slidingtextdiv {
+        display: flex;
+        width: 50%;
+        margin: auto;
+        border-bottom: 0.5px solid grey;
+        /* padding-bottom: 10px; */
+      }
+      #slidingtextdiv > div {
+        margin: auto;
+        cursor: pointer;
+        padding-bottom: 10px;
+        width: 300px;
+        text-align: center;
+      }
+      #slidingtextdiv > div:hover {
+        border-bottom: 2px solid black;
+      }
+      #cont {
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 30px;
+      }
+      #cont > div {
+        width: 30%;
+        height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px,
+          rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px,
+          rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px,
+          rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        text-align: center;
+        padding-bottom: 25px;
+      }
+      #cont > div > h3:nth-child(4) {
+        padding-right: 50px;
+      }
+      #cont > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #cont > div > button {
+        width: 100px;
+        height: 30px;
+        color: white;
+        background-color: black;
+      }
+      #sidebuttoncont {
+        display: flex;
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        margin-top: 30px;
+      }
+      #sidebuttoncont > div {
+        width: 50%;
+      }
+      #sidebuttoncont > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #sidebutdivcont {
+        margin-top: 100px;
+        padding-left: 50px;
+      }
+      #sidebutdiv > button {
+        height: 30px;
+        margin-left: 8px;
+        width: 190px;
+        background-color: black;
+        border: none;
+        justify-content: space-between;
+        color: white;
+      }
+      #giftcont {
+        display: flex;
+        width: 80%;
+        height: 500px;
+        margin: auto;
+        margin-top: 30px;
+      }
+      #giftcont button {
+        background-image: none;
+      }
+      #giftcont > div {
+        width: 50%;
+        height: 100%;
+      }
+      #giftcont > div > img {
+        width: 100%;
+        height: 100%;
+      }
+      #glowtext {
+        width: 40%;
+        margin: auto;
+        text-align: center;
+        margin-top: 100px;
+      }
+      #glowcont {
+        display: flex;
+        width: 100%;
+        border: 1px dotted blue;
+        min-height: 400px;
+        justify-content: space-evenly;
+        padding-top: 50px;
+        padding-bottom: 25px;
+      }
+      #glowcont > div {
+        width: 30%;
+      }
+      #glowcont > div > img {
+        width: 100%;
+      }
+      button {
+        padding: 10px 15px 10px 15px;
+        background-color: black;
+        color: white;
+        border: none;
+      }
+      .present {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        margin-top: 80px;
+      }
+      #presentcont {
+        width: 80%;
+        min-height: 500px;
+        display: flex;
+        margin: auto;
+      }
+      #presentcont > div:nth-child(1) {
+        width: 80%;
+      }
+      #presentcont > div:nth-child(1) > img {
+        width: 100%;
+        height: 100%;
+      }
+      #presentitems {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 50px;
+      }
+      #presentitems > div > img {
+        width: 100%;
+        height: 50%;
+      }
+      #presentitems > div {
+        padding-left: 40px;
+      }
+      #bookcont {
+        display: flex;
+        width: 95%;
+        min-height: 400px;
+        justify-content: space-evenly;
+        padding: 15px;
+        border: 1px dotted blue;
+        margin: auto;
+      }
+      #bookcont > div {
+        width: 30%;
+      }
+      #bookcont > div > img {
+        width: 100%;
+      }
+      #community {
+        width: 90%;
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+        min-height: 400px;
+      }
+      #community > div {
+        width: 20%;
+      }
+      .shopnow {
+        background-image: url(https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3F1YXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .shopnow > button {
+        margin-left: 30%;
+        margin-top: 80%;
+      }
+      #gallery {
+        width: 30%;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+      }
+      #gallery > a {
+        margin-top: 20px;
+      }
+      #homeend {
+        width: 85%;
+        display: flex;
+        margin: auto;
+        justify-content: space-evenly;
+        min-height: 300px;
+        margin-top: 50px;
+      }
+      #homeend > div {
+        width: 20%;
+      }
+      #homeend > div > img {
+        width: 100%;
+      }
+      #homeend > div > u:hover {
+        cursor: pointer;
+      }
+      #footer {
+        width: 100%;
+        min-height: 400px;
+        background-color: black;
+        /* border: 2px solid yellow; */
+        margin-top: 20px;
+        color: white;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        margin-bottom: 0px;
+      }
+      #footer > div {
+        padding-left: 50px;
+        padding-top: 100px;
+      }
+      #footer select {
+        padding: 10px 15px;
+        background-color: black;
+        color: white;
+        border: 2px dotted cyan;
+      }
+      #footerform > input {
+        display: block;
+        margin-top: 25px;
+        padding: 10px 25px;
+        width: 100%;
+        color: white;
+        background-color: black;
+        border: solid white;
+      }
+      #footericon {
+        display: flex;
+      }
+      .fa:hover {
+        opacity: 0.9;
+      }
+
+      .fa-facebook {
+        background: #007bb5;
+        color: white;
+      }
+
+      .fa-pinterest {
+        background: #cb2027;
+        color: white;
+      }
+
+      .fa-reddit {
+        background: #ff5700;
+        color: white;
+      }
+
+      .fa {
+        padding: 20px;
+        /* font-size: 40px; */
+        width: 20px;
+        text-decoration: none;
+        margin: 20px;
+      }
+      #rights {
+        display: grid;
+        width: 100%;
+        background-color: black;
+        color: white;
+        grid-template-columns: 50% 50%;
+      }
+      #rights > div {
+        /* width: 50%; */
+        font-size: 15px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        /* border: 2px solid yellow; */
+      }
+      #rights > button {
+        border: none;
+      }
+      #floaticon {
+        margin-left: 90%;
+        text-align: right;
+      }
+      .sticky {
+        position: fixed;
+        display: block;
+        bottom: 20px;
+      }
+      .stickychat {
+        position: fixed;
+        display: block;
+        bottom: 100px;
+      }
+      #signincont {
+        /* width: 350px; */
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 250px;
+        top: 160px;
+        right: 0px;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        color: black;
+      }
+      #signinform {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
+        line-height: 25px;
+      }
+      #signinform > input {
+        margin: 5px 10px 5px 10px;
+        background-color: #fff;
+        border: 1px solid rgb(197, 197, 197);
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      #signinform > input[type="submit"] {
+        background-color: black;
+        color: white;
+      }
+      .fourboxcont {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        background-color: white;
+        top: 60px;
+        right: 0px;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        color: black;
+        min-height: 250px;
+        justify-content: space-evenly;
+      }
+      .fourboxcont > div {
+        width: 22%;
+        /* border: 2px solid yellow; */
+        height: 100%;
+      }
+      #holidaypop > div > img {
+        width: 100%;
+      }
+      #holidaypop {
+        display: none;
+      }
+      #navboticoncont{
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 60px;
+        display: flex;
+        margin-bottom: 50px;
+        /* border: 2px solid red; */
+      }
+      #signin,#cart {
+        padding-top:0px;
+        padding-left: 30px;
+        width: 28px;
+        height: 28px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+        <div id="navtop">
+          <div id="navsignup" onclick="displayform()">EMAIL SIGN UP</div>
+          <div id="navname">BOBBI BROWN</div>
+          <div id="navlogo">
+            <div id="navbbaccess">
+              JOIN BB<span><u>ACCESS</u></span>
+            </div>
+            <div>
+              <img
+                id="storelocator"
+                class="logosmall"
+                src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Location-White.svg"
+                alt=""
+              />
+            </div>
+          
+          </div>
+        </div>
+        <div id="signincont">
+          <form id="signinform" action="">
+            <h2>Login</h2>
+            <input type="email" id="signinemail" placeholder="Enter email" />
+            <input
+              type="text"
+              id="signinpassword"
+              placeholder="Enter Password"
+            />
+            <a href="#">Forgot Password?</a>
+            <input type="submit" value="LOG IN" />
+          </form>
+        </div>
+        <div id="navbot">
+          <div id="navsearch">
+            <span
+              ><u
+                ><img
+                  id="searchlogo"
+                  class="logosmall"
+                  src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Search-White.svg"
+                  alt="" /></u
+            ></span>
+            <u
+              ><input id="navsearchinput" type="text" placeholder="SEARCH"
+            /></u>
+          </div>
+          <div id="navoptions">
+            <div id="holiday" class="options" onclick="displayhpop(1)">
+              HOLIDAY
+            </div>
+            <div id="new" class="options" onclick="displayhpop(2)">NEW</div>
+            <div id="bestsellers" class="options" onclick="displayhpop(3)">
+              BESTSELLERS
+            </div>
+            <div id="face" class="options" onclick="displayhpop(4)">FACE</div>
+            <div id="makeup" class="options" onclick="displayhpop(5)">
+              MAKEUP
+            </div>
+            <div id="skincare" class="options" onclick="displayhpop(6)">
+              SKINCARE
+            </div>
+            <div id="virtual" class="options" onclick="displayhpop(7)">
+              VIRTUAL SERVICES
+            </div>
+            <div id="discover" class="options" onclick="displayhpop(8)">
+              DISCOVER
+            </div>
+            <div id=navboticoncont>
+              <div style="margin-bottom: 30px;">
+              <img
+                id="signin"
+                class="logosmall"
+                onclick="displaysignin()"
+                src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/MyAccount-White.svg"
+                alt=""
+              />
+            </div style="padding-bottom: 30px;">
+            <div>
+              <img
+                id="cart"
+                class="logosmall"
+                src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Bag-White.svg"
+                alt=""
+              />
+            </div>
+          </div>
+            
+          </div>
+          <div id="holidaypop" class="fourboxcont"></div>
+        </div>
+      <div id="signupdiv">
+        <h1>SIGN UP NOW</h1>
+        <h3 style="padding-left: 10px">
+          Sign up for emails and be the first to know about exclusive offers,
+          pre-sales, new collections and more.
+        </h3>
+        <form id="signupform" action="">
+          <input type="email" id="signupemail" placeholder="Enter Email" />
+          <input type="text" id="signuppassword" placeholder="enterpassword" />
+          <label for="">We love birthdays</label>
+          <label for=""
+            >Tell us your birthday and we'll send you a special surprise on your
+            big day.</label
+          >
+          <select name="month" id="signupmonth">
+            <option value="">Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <select name="day" id="signupday">
+            <option value="">Day</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <input type="submit" value="SIGN UP" />
+          <button
+            style="background-color: rgb(245, 88, 88); color: white"
+            id="signupclose"
+            onclick="closesignup()"
+          >
+            CLOSE
+          </button>
+        </form>
+      </div>
+      <div id="buttondivcont">
+        <h3>12 DAYS OF BOBBI BROWN</h3>
+        <h1>DAY7:50% OFF</h1>
+        <h1>LIMITED-EDITION</h1>
+        <h1>BEAUTY</h1>
+        <h3>
+          GET 25% OFF ON SITEWIDE AND 50%OFF ON LIMITED-EDITION FAVOURETES
+        </h3>
+        <div id="buttonsdiv">
+          <button id="clickbest" onclick="shopbest()">SHOP BEST SELLERS</button>
+          <button id="clicklast" onclick="shopbest()">SHOP LAST CHANCE</button>
+        </div>
+      </div>
+      <h1
+        style="
+          font-family: sans-serif;
+          font-size: 60px;
+          text-align: center;
+          margin-top: 10px;
+        "
+      >
+        GOTTA HAVE IT
+      </h1>
+      <div id="slidingtextdiv">
+        <div id="slidingtrend">TRENDING NOW</div>
+        <div id="slidingnew">NEW</div>
+        <div id="slidingskin">SKIN CARE</div>
+      </div>
+      <div id="cont"></div>
+      <div id="sidebuttoncont">
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/FH21/FH21_12_Days_Day_7_pc.jpg"
+            alt=""
+          />
+        </div>
+        <div id="sidebutdivcont">
+          <h3 style="padding-left: 0px">12 DAYS OF BOBBI BROWN</h3>
+          <h1>DAY7:50% OFF</h1>
+          <h1>LIMITED-EDITION</h1>
+          <h1>BEAUTY</h1>
+          <h3 style="padding-left: 0px">
+            GET 25% OFF ON SITEWIDE AND 50%OFF ON LIMITED-EDITION FAVOURETES
+          </h3>
+          <div id="sidebutdiv">
+            <button id="clickbest2" onclick="shopbest()">SHOP BEST SELLERS</button>
+            <button id="clicklast2" onclick="shopbest()">SHOP BEST CHANCE</button>
+          </div>
+        </div>
+      </div>
+      <div id="giftcont">
+        <div>
+          <h1 style="margin-left: 50px; margin-top: 150px">THAT'S A WRAP</h1>
+          <h3>
+            Enjoy free shipping and gift wrapping with every order. Shop until
+            Friday, Dec 17 at 12PM ET for Christmas delivery!
+          </h3>
+          <button class="shopnow" onclick="shopnow()">SHOP NOW</button>
+        </div>
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/FH21/FH21_HolidayShipping_pc.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div id="glowtext">
+        <h1>GLOW YOUR OWN WAY</h1>
+        <h4>
+          Learn how to layer your blush and highlighter for a radiant flush of
+          color that best complements your skin tone.
+        </h4>
+      </div>
+      <div id="glowcont">
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/FH21/FH21_Blush_Highlighter_1.jpg"
+            alt=""
+          />
+          <h1>FOR LIGTH SKIN TONES</h1>
+          <h3><b>POT ROUGE IN POWDER PINK</b></h3>
+          <h3><b>& HIGHLIGHTING POWDER IN PINK GLOW</b></h3>
+          <h3>
+            "Opt for powder pink to brighten and warm the complexion
+            naturally,then layer with pink glow to pop."
+          </h3>
+          <h3>-Cassandra Garcia ,Global Pro Artist</h3>
+          <button class="butblush" onclick="shopface()">SHOP BLUSH</button>
+          <button class="buthigh" onclick="shopface()">SHOP HIGHLIGHTER</button>
+        </div>
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/FH21/FH21_Blush_Highlighter_2.jpg"
+            alt=""
+          />
+          <h1>FOR MEDIUM SKIN TONES</h1>
+          <h3><b>POT ROUGE IN FRESH MELON</b></h3>
+          <h3><b>& HIGHLIGHTING POWDER IN AFTERNOON GLOW</b></h3>
+          <h3>
+            "if you see more golden in the skin go for a warmer,peahcey blush to
+            lift and brighten.Finish with gold highlighter to enchance your
+            natural skin tone."
+          </h3>
+          <h3>-Cassandra Garcia.Global Pro Artist</h3>
+          <button class="butblush" onclick="shopface()">SHOP BLUSH</button>
+          <button class="buthigh" onclick="shopface()">SHOP HIGHLIGHTER</button>
+        </div>
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/FH21/FH21_Blush_Highlighter_3.jpg"
+            alt=""
+          />
+          <h1>FOR MEDIUM SKIN TONES</h1>
+          <h3><b>POT ROUGE IN PALE PINK</b></h3>
+          <h3><b>& HIGHLIGHTING POWDER IN BRONZE GLOW</b></h3>
+          <h3>
+            "For richer skin tones,make the cheeks pop with a light pink blush
+            to brighten the skin.Then add warmth with a bronze highligh."
+          </h3>
+          <h3>-Cassandra Garcia.Global Pro Artist</h3>
+          <button class="butblush" onclick="shopface()">SHOP BLUSH</button>
+          <button class="buthigh" onclick="shopface()">SHOP HIGHLIGHTER</button>
+        </div>
+      </div>
+      <div class="present">
+        <h1>GLOW YOUR OWN WAY</h1>
+        <h4>
+          Learn how to layer your blush and highlighter for a radiant flush of
+          color that best complements your skin tone.
+        </h4>
+        <button class="shopnow" onclick="shopnew()"  style="background-image: none">shop now</button>
+      </div>
+      <div id="presentcont">
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/FH21/FH21_DecemberEvergreen_Beauty_Gifts_pc.jpg"
+            alt=""
+          />
+        </div>
+        <div id="presentitems"></div>
+      </div>
+      <div class="present">
+        <h4>VIRTUAL ARTISTY CONSULTATIONS</h4>
+        <h1>LEARN FROM THE PRO</h1>
+        <h4>
+          From trying a new shade to learning new tips, our artists are here to
+          help with complimentary video sessions.
+        </h4>
+      </div>
+      <div id="bookcont">
+        <div>
+          <h4>30 MIN</h4>
+          <img
+            src="https://media.istockphoto.com/photos/learning-from-youtube-picture-id1174862193?b=1&k=20&m=1174862193&s=170667a&w=0&h=X3iJ17rMV1sEyouj7aS42uIZoUIg0dWFIiAUMQEH61Q="
+            alt=""
+          />
+          <h1>LOOK LESS TIRED</h1>
+          <h4>
+            Learn how to look bright eyed and fresh faced in minutes with our
+            pro tips
+          </h4>
+          <button onclick="bookcall()">BOOK NOW</button>
+        </div>
+        <div>
+          <h4>15 MIN</h4>
+          <img
+            src="https://images.unsplash.com/photo-1617221082509-fd8ae54c1769?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8b25saW5lJTIwbWFrZXVwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            alt=""
+          />
+          <h1>LOOK FRESH FOR VIDEO CALLS</h1>
+          <h4>
+            Learn how to neutralize undereye circles and look instantly more
+            awake and bright-eyed using a few easy essentials.
+          </h4>
+          <button onclick="bookcall()">BOOK NOW</button>
+        </div>
+        <div>
+          <h4>30 MIN</h4>
+          <img
+            src="https://media.istockphoto.com/photos/young-adult-woman-vlogging-about-cosmetics-skin-care-products-picture-id857028918?b=1&k=20&m=857028918&s=170667a&w=0&h=dhphw83llB2_HZK18d3wZBWphA8H11nHNvkQfRjJCgo="
+            alt=""
+          />
+          <h1>CUSTOMIZE YOUR SKINCARE ROUTINE</h1>
+          <h4>
+            Learn how to address your top skin concerns with personalized
+            routine curated by an artist
+          </h4>
+          <button onclick="bookcall()">BOOK NOW</button>
+        </div>
+      </div>
+      <div class="present">
+        <h1>#BOBBIBROWN COMMUNITY</h1>
+        <h4>
+          Looking fresh-faced? Let's see it. Mention @bobbibrown and tag
+          #BobbiBrown to share.z
+        </h4>
+      </div>
+      <div id="community">
+        <div class="shopnow">
+          <button onclick="shopskin()">Shop Now</button>
+        </div>
+        <div class="shopnow">
+          <button onclick="shopskin()">Shop Now</button>
+        </div>
+        <div class="shopnow">
+          <button onclick="shopskin()">Shop Now</button>
+        </div>
+        <div class="shopnow">
+          <button onclick="shopskin()">Shop Now</button>
+        </div>
+      </div>
+      <div id="gallery">
+        <button>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/icons/olapic-camera-icon.gif"
+            alt=""
+          />SHARE YOUR LOOK
+        </button>
+        <a href="">VIEW GALLERY</a>
+      </div>
+      <div id="homeend">
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_03.jpg"
+            alt=""
+          />
+          <h3>CHAT NOW</h3>
+          <h4>Chat with a makeup artist to get product recommendations.</h4>
+          <a href="">CHAT NOW</a>
+        </div>
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_05.jpg"
+            alt=""
+          />
+          <h3>FREE SHIPPING</h3>
+          <h4>
+            Get free shipping on all orders $65+ .Or join Bobbi Brown Club to
+            get free shipping on all orders.
+          </h4>
+          <a href="">LEARN MORE</a>
+        </div>
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_07.jpg"
+            alt=""
+          />
+          <h3>WE WANT YOU TO LOVE IT</h3>
+          <h4>
+            That's why we offer free shipping and returns on all foundations,
+            corrections,concealers,and powders.
+          </h4>
+          <a href="">LEARN MORE</a>
+        </div>
+        <div>
+          <img
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/HP_Modules/EvergreenServices/BB_HP_Module_PC_Services_09.jpg"
+            alt=""
+          />
+          <h3>EXCLUSIVE OFFERS</h3>
+          <h4>Special somethings,just for you</h4>
+          <a href="">GET OFFERS</a>
+        </div>
+      </div>
+      <div id="footer">
+        <div id="helpfoot">
+          <h3><b>NEED HELP?</b></h3>
+          <h4><b>Chat with an artist</b></h4>
+          <h4>Text an artist</h4>
+          <h4>Shipping & returns</h4>
+          <h4>FAQS</h4>
+          <h4>Careers</h4>
+          <select name="country" id="country">
+            <option value="0" label="Select a country … " selected="selected">
+              Select a country …
+            </option>
+            <optgroup id="country-optgroup-Africa" label="Africa">
+              <option value="DZ" label="Algeria">Algeria</option>
+              <option value="AO" label="Angola">Angola</option>
+              <option value="BJ" label="Benin">Benin</option>
+              <option value="BW" label="Botswana">Botswana</option>
+              <option value="BF" label="Burkina Faso">Burkina Faso</option>
+              <option value="BI" label="Burundi">Burundi</option>
+              <option value="CM" label="Cameroon">Cameroon</option>
+              <option value="CV" label="Cape Verde">Cape Verde</option>
+              <option value="CF" label="Central African Republic">
+                Central African Republic
+              </option>
+              <option value="TD" label="Chad">Chad</option>
+              <option value="KM" label="Comoros">Comoros</option>
+              <option value="CG" label="Congo - Brazzaville">
+                Congo - Brazzaville
+              </option>
+              <option value="CD" label="Congo - Kinshasa">
+                Congo - Kinshasa
+              </option>
+              <option value="CI" label="Côte d’Ivoire">Côte d’Ivoire</option>
+              <option value="DJ" label="Djibouti">Djibouti</option>
+              <option value="EG" label="Egypt">Egypt</option>
+              <option value="GQ" label="Equatorial Guinea">
+                Equatorial Guinea
+              </option>
+              <option value="ER" label="Eritrea">Eritrea</option>
+              <option value="ET" label="Ethiopia">Ethiopia</option>
+              <option value="GA" label="Gabon">Gabon</option>
+              <option value="GM" label="Gambia">Gambia</option>
+              <option value="GH" label="Ghana">Ghana</option>
+              <option value="GN" label="Guinea">Guinea</option>
+              <option value="GW" label="Guinea-Bissau">Guinea-Bissau</option>
+              <option value="KE" label="Kenya">Kenya</option>
+              <option value="LS" label="Lesotho">Lesotho</option>
+              <option value="LR" label="Liberia">Liberia</option>
+              <option value="LY" label="Libya">Libya</option>
+              <option value="MG" label="Madagascar">Madagascar</option>
+              <option value="MW" label="Malawi">Malawi</option>
+              <option value="ML" label="Mali">Mali</option>
+              <option value="MR" label="Mauritania">Mauritania</option>
+              <option value="MU" label="Mauritius">Mauritius</option>
+              <option value="YT" label="Mayotte">Mayotte</option>
+              <option value="MA" label="Morocco">Morocco</option>
+              <option value="MZ" label="Mozambique">Mozambique</option>
+              <option value="NA" label="Namibia">Namibia</option>
+              <option value="NE" label="Niger">Niger</option>
+              <option value="NG" label="Nigeria">Nigeria</option>
+              <option value="RW" label="Rwanda">Rwanda</option>
+              <option value="RE" label="Réunion">Réunion</option>
+              <option value="SH" label="Saint Helena">Saint Helena</option>
+              <option value="SN" label="Senegal">Senegal</option>
+              <option value="SC" label="Seychelles">Seychelles</option>
+              <option value="SL" label="Sierra Leone">Sierra Leone</option>
+              <option value="SO" label="Somalia">Somalia</option>
+              <option value="ZA" label="South Africa">South Africa</option>
+              <option value="SD" label="Sudan">Sudan</option>
+              <option value="SZ" label="Swaziland">Swaziland</option>
+              <option value="ST" label="São Tomé and Príncipe">
+                São Tomé and Príncipe
+              </option>
+              <option value="TZ" label="Tanzania">Tanzania</option>
+              <option value="TG" label="Togo">Togo</option>
+              <option value="TN" label="Tunisia">Tunisia</option>
+              <option value="UG" label="Uganda">Uganda</option>
+              <option value="EH" label="Western Sahara">Western Sahara</option>
+              <option value="ZM" label="Zambia">Zambia</option>
+              <option value="ZW" label="Zimbabwe">Zimbabwe</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Americas" label="Americas">
+              <option value="AI" label="Anguilla">Anguilla</option>
+              <option value="AG" label="Antigua and Barbuda">
+                Antigua and Barbuda
+              </option>
+              <option value="AR" label="Argentina">Argentina</option>
+              <option value="AW" label="Aruba">Aruba</option>
+              <option value="BS" label="Bahamas">Bahamas</option>
+              <option value="BB" label="Barbados">Barbados</option>
+              <option value="BZ" label="Belize">Belize</option>
+              <option value="BM" label="Bermuda">Bermuda</option>
+              <option value="BO" label="Bolivia">Bolivia</option>
+              <option value="BR" label="Brazil">Brazil</option>
+              <option value="VG" label="British Virgin Islands">
+                British Virgin Islands
+              </option>
+              <option value="CA" label="Canada">Canada</option>
+              <option value="KY" label="Cayman Islands">Cayman Islands</option>
+              <option value="CL" label="Chile">Chile</option>
+              <option value="CO" label="Colombia">Colombia</option>
+              <option value="CR" label="Costa Rica">Costa Rica</option>
+              <option value="CU" label="Cuba">Cuba</option>
+              <option value="DM" label="Dominica">Dominica</option>
+              <option value="DO" label="Dominican Republic">
+                Dominican Republic
+              </option>
+              <option value="EC" label="Ecuador">Ecuador</option>
+              <option value="SV" label="El Salvador">El Salvador</option>
+              <option value="FK" label="Falkland Islands">
+                Falkland Islands
+              </option>
+              <option value="GF" label="French Guiana">French Guiana</option>
+              <option value="GL" label="Greenland">Greenland</option>
+              <option value="GD" label="Grenada">Grenada</option>
+              <option value="GP" label="Guadeloupe">Guadeloupe</option>
+              <option value="GT" label="Guatemala">Guatemala</option>
+              <option value="GY" label="Guyana">Guyana</option>
+              <option value="HT" label="Haiti">Haiti</option>
+              <option value="HN" label="Honduras">Honduras</option>
+              <option value="JM" label="Jamaica">Jamaica</option>
+              <option value="MQ" label="Martinique">Martinique</option>
+              <option value="MX" label="Mexico">Mexico</option>
+              <option value="MS" label="Montserrat">Montserrat</option>
+              <option value="AN" label="Netherlands Antilles">
+                Netherlands Antilles
+              </option>
+              <option value="NI" label="Nicaragua">Nicaragua</option>
+              <option value="PA" label="Panama">Panama</option>
+              <option value="PY" label="Paraguay">Paraguay</option>
+              <option value="PE" label="Peru">Peru</option>
+              <option value="PR" label="Puerto Rico">Puerto Rico</option>
+              <option value="BL" label="Saint Barthélemy">
+                Saint Barthélemy
+              </option>
+              <option value="KN" label="Saint Kitts and Nevis">
+                Saint Kitts and Nevis
+              </option>
+              <option value="LC" label="Saint Lucia">Saint Lucia</option>
+              <option value="MF" label="Saint Martin">Saint Martin</option>
+              <option value="PM" label="Saint Pierre and Miquelon">
+                Saint Pierre and Miquelon
+              </option>
+              <option value="VC" label="Saint Vincent and the Grenadines">
+                Saint Vincent and the Grenadines
+              </option>
+              <option value="SR" label="Suriname">Suriname</option>
+              <option value="TT" label="Trinidad and Tobago">
+                Trinidad and Tobago
+              </option>
+              <option value="TC" label="Turks and Caicos Islands">
+                Turks and Caicos Islands
+              </option>
+              <option value="VI" label="U.S. Virgin Islands">
+                U.S. Virgin Islands
+              </option>
+              <option value="US" label="United States">United States</option>
+              <option value="UY" label="Uruguay">Uruguay</option>
+              <option value="VE" label="Venezuela">Venezuela</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Asia" label="Asia">
+              <option value="AF" label="Afghanistan">Afghanistan</option>
+              <option value="AM" label="Armenia">Armenia</option>
+              <option value="AZ" label="Azerbaijan">Azerbaijan</option>
+              <option value="BH" label="Bahrain">Bahrain</option>
+              <option value="BD" label="Bangladesh">Bangladesh</option>
+              <option value="BT" label="Bhutan">Bhutan</option>
+              <option value="BN" label="Brunei">Brunei</option>
+              <option value="KH" label="Cambodia">Cambodia</option>
+              <option value="CN" label="China">China</option>
+              <option value="CY" label="Cyprus">Cyprus</option>
+              <option value="GE" label="Georgia">Georgia</option>
+              <option value="HK" label="Hong Kong SAR China">
+                Hong Kong SAR China
+              </option>
+              <option value="IN" label="India">India</option>
+              <option value="ID" label="Indonesia">Indonesia</option>
+              <option value="IR" label="Iran">Iran</option>
+              <option value="IQ" label="Iraq">Iraq</option>
+              <option value="IL" label="Israel">Israel</option>
+              <option value="JP" label="Japan">Japan</option>
+              <option value="JO" label="Jordan">Jordan</option>
+              <option value="KZ" label="Kazakhstan">Kazakhstan</option>
+              <option value="KW" label="Kuwait">Kuwait</option>
+              <option value="KG" label="Kyrgyzstan">Kyrgyzstan</option>
+              <option value="LA" label="Laos">Laos</option>
+              <option value="LB" label="Lebanon">Lebanon</option>
+              <option value="MO" label="Macau SAR China">
+                Macau SAR China
+              </option>
+              <option value="MY" label="Malaysia">Malaysia</option>
+              <option value="MV" label="Maldives">Maldives</option>
+              <option value="MN" label="Mongolia">Mongolia</option>
+              <option value="MM" label="Myanmar [Burma]">
+                Myanmar [Burma]
+              </option>
+              <option value="NP" label="Nepal">Nepal</option>
+              <option value="NT" label="Neutral Zone">Neutral Zone</option>
+              <option value="KP" label="North Korea">North Korea</option>
+              <option value="OM" label="Oman">Oman</option>
+              <option value="PK" label="Pakistan">Pakistan</option>
+              <option value="PS" label="Palestinian Territories">
+                Palestinian Territories
+              </option>
+              <option value="YD" label="People's Democratic Republic of Yemen">
+                People's Democratic Republic of Yemen
+              </option>
+              <option value="PH" label="Philippines">Philippines</option>
+              <option value="QA" label="Qatar">Qatar</option>
+              <option value="SA" label="Saudi Arabia">Saudi Arabia</option>
+              <option value="SG" label="Singapore">Singapore</option>
+              <option value="KR" label="South Korea">South Korea</option>
+              <option value="LK" label="Sri Lanka">Sri Lanka</option>
+              <option value="SY" label="Syria">Syria</option>
+              <option value="TW" label="Taiwan">Taiwan</option>
+              <option value="TJ" label="Tajikistan">Tajikistan</option>
+              <option value="TH" label="Thailand">Thailand</option>
+              <option value="TL" label="Timor-Leste">Timor-Leste</option>
+              <option value="TR" label="Turkey">Turkey</option>
+              <option value="™" label="Turkmenistan">Turkmenistan</option>
+              <option value="AE" label="United Arab Emirates">
+                United Arab Emirates
+              </option>
+              <option value="UZ" label="Uzbekistan">Uzbekistan</option>
+              <option value="VN" label="Vietnam">Vietnam</option>
+              <option value="YE" label="Yemen">Yemen</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Europe" label="Europe">
+              <option value="AL" label="Albania">Albania</option>
+              <option value="AD" label="Andorra">Andorra</option>
+              <option value="AT" label="Austria">Austria</option>
+              <option value="BY" label="Belarus">Belarus</option>
+              <option value="BE" label="Belgium">Belgium</option>
+              <option value="BA" label="Bosnia and Herzegovina">
+                Bosnia and Herzegovina
+              </option>
+              <option value="BG" label="Bulgaria">Bulgaria</option>
+              <option value="HR" label="Croatia">Croatia</option>
+              <option value="CY" label="Cyprus">Cyprus</option>
+              <option value="CZ" label="Czech Republic">Czech Republic</option>
+              <option value="DK" label="Denmark">Denmark</option>
+              <option value="DD" label="East Germany">East Germany</option>
+              <option value="EE" label="Estonia">Estonia</option>
+              <option value="FO" label="Faroe Islands">Faroe Islands</option>
+              <option value="FI" label="Finland">Finland</option>
+              <option value="FR" label="France">France</option>
+              <option value="DE" label="Germany">Germany</option>
+              <option value="GI" label="Gibraltar">Gibraltar</option>
+              <option value="GR" label="Greece">Greece</option>
+              <option value="GG" label="Guernsey">Guernsey</option>
+              <option value="HU" label="Hungary">Hungary</option>
+              <option value="IS" label="Iceland">Iceland</option>
+              <option value="IE" label="Ireland">Ireland</option>
+              <option value="IM" label="Isle of Man">Isle of Man</option>
+              <option value="IT" label="Italy">Italy</option>
+              <option value="JE" label="Jersey">Jersey</option>
+              <option value="LV" label="Latvia">Latvia</option>
+              <option value="LI" label="Liechtenstein">Liechtenstein</option>
+              <option value="LT" label="Lithuania">Lithuania</option>
+              <option value="LU" label="Luxembourg">Luxembourg</option>
+              <option value="MK" label="Macedonia">Macedonia</option>
+              <option value="MT" label="Malta">Malta</option>
+              <option value="FX" label="Metropolitan France">
+                Metropolitan France
+              </option>
+              <option value="MD" label="Moldova">Moldova</option>
+              <option value="MC" label="Monaco">Monaco</option>
+              <option value="ME" label="Montenegro">Montenegro</option>
+              <option value="NL" label="Netherlands">Netherlands</option>
+              <option value="NO" label="Norway">Norway</option>
+              <option value="PL" label="Poland">Poland</option>
+              <option value="PT" label="Portugal">Portugal</option>
+              <option value="RO" label="Romania">Romania</option>
+              <option value="RU" label="Russia">Russia</option>
+              <option value="SM" label="San Marino">San Marino</option>
+              <option value="RS" label="Serbia">Serbia</option>
+              <option value="CS" label="Serbia and Montenegro">
+                Serbia and Montenegro
+              </option>
+              <option value="SK" label="Slovakia">Slovakia</option>
+              <option value="SI" label="Slovenia">Slovenia</option>
+              <option value="ES" label="Spain">Spain</option>
+              <option value="SJ" label="Svalbard and Jan Mayen">
+                Svalbard and Jan Mayen
+              </option>
+              <option value="SE" label="Sweden">Sweden</option>
+              <option value="CH" label="Switzerland">Switzerland</option>
+              <option value="UA" label="Ukraine">Ukraine</option>
+              <option value="SU" label="Union of Soviet Socialist Republics">
+                Union of Soviet Socialist Republics
+              </option>
+              <option value="GB" label="United Kingdom">United Kingdom</option>
+              <option value="VA" label="Vatican City">Vatican City</option>
+              <option value="AX" label="Åland Islands">Åland Islands</option>
+            </optgroup>
+            <optgroup id="country-optgroup-Oceania" label="Oceania">
+              <option value="AS" label="American Samoa">American Samoa</option>
+              <option value="AQ" label="Antarctica">Antarctica</option>
+              <option value="AU" label="Australia">Australia</option>
+              <option value="BV" label="Bouvet Island">Bouvet Island</option>
+              <option value="IO" label="British Indian Ocean Territory">
+                British Indian Ocean Territory
+              </option>
+              <option value="CX" label="Christmas Island">
+                Christmas Island
+              </option>
+              <option value="CC" label="Cocos [Keeling] Islands">
+                Cocos [Keeling] Islands
+              </option>
+              <option value="CK" label="Cook Islands">Cook Islands</option>
+              <option value="FJ" label="Fiji">Fiji</option>
+              <option value="PF" label="French Polynesia">
+                French Polynesia
+              </option>
+              <option value="TF" label="French Southern Territories">
+                French Southern Territories
+              </option>
+              <option value="GU" label="Guam">Guam</option>
+              <option value="HM" label="Heard Island and McDonald Islands">
+                Heard Island and McDonald Islands
+              </option>
+              <option value="KI" label="Kiribati">Kiribati</option>
+              <option value="MH" label="Marshall Islands">
+                Marshall Islands
+              </option>
+              <option value="FM" label="Micronesia">Micronesia</option>
+              <option value="NR" label="Nauru">Nauru</option>
+              <option value="NC" label="New Caledonia">New Caledonia</option>
+              <option value="NZ" label="New Zealand">New Zealand</option>
+              <option value="NU" label="Niue">Niue</option>
+              <option value="NF" label="Norfolk Island">Norfolk Island</option>
+              <option value="MP" label="Northern Mariana Islands">
+                Northern Mariana Islands
+              </option>
+              <option value="PW" label="Palau">Palau</option>
+              <option value="PG" label="Papua New Guinea">
+                Papua New Guinea
+              </option>
+              <option value="PN" label="Pitcairn Islands">
+                Pitcairn Islands
+              </option>
+              <option value="WS" label="Samoa">Samoa</option>
+              <option value="SB" label="Solomon Islands">
+                Solomon Islands
+              </option>
+              <option
+                value="GS"
+                label="South Georgia and the South Sandwich Islands"
+              >
+                South Georgia and the South Sandwich Islands
+              </option>
+              <option value="TK" label="Tokelau">Tokelau</option>
+              <option value="TO" label="Tonga">Tonga</option>
+              <option value="TV" label="Tuvalu">Tuvalu</option>
+              <option value="UM" label="U.S. Minor Outlying Islands">
+                U.S. Minor Outlying Islands
+              </option>
+              <option value="VU" label="Vanuatu">Vanuatu</option>
+              <option value="WF" label="Wallis and Futuna">
+                Wallis and Futuna
+              </option>
+            </optgroup>
+          </select>
+        </div>
+        <div>
+          <h3><b>MY BOBBI BROWN</b></h3>
+          <h4>BB Access</h4>
+          <h4>My Account</h4>
+          <h4>My Orders</h4>
+          <h4>Store Locator</h4>
+        </div>
+        <div>
+          <form action="" id="footerform">
+            <input type="text" placeholder="ENTER YOUR EMAIL" />
+            <input
+              type="text"
+              name=""
+              id=""
+              placeholder="ENTER YOUR MOBILE PHONE"
+            />
+            <input type="submit" name="" id="" />
+          </form>
+          <h3><b>FOLLOW US</b></h3>
+          <div id="footericon">
+            <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+            <a href="https://in.pinterest.com/" class="fa fa-pinterest"></a>
+            <a href="https://www.reddit.com/" class="fa fa-reddit"></a>
+          </div>
+        </div>
+      </div>
+
+      <hr style="color: white; margin-top: 0px" />
+      <div id="rights">
+        <div>
+          © Bobbi Brown Professional Cosmetics, Inc. All worldwide rights
+          reserved.
+        </div>
+        <div>
+          <button>terms and condtions</button>
+          <button>Intrest based Ads</button>
+          <button>
+            California donot sell my Privacy Policy Personal Information
+          </button>
+          <button>Accessiability</button>
+        </div>
+      </div>
+      <div id="floaticon">
+        <div>
+          <img
+            class="stickychat"
+            width="100px"
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/live_chat/icon-livechat_@2x.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="sticky"
+            width="60px"
+            src="https://www.bobbibrowncosmetics.com/media/images/global/icon-backtotop.png"
+            alt=""
+            onclick="scrolltop()"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.querySelector('#cart').addEventListener('click',function(){
+    window.location.href="cart.html"
+  });
+  var cart=JSON.parse(localStorage.getItem("cartproducts")) || [];
+  var signuparr = JSON.parse(localStorage.getItem("signupdata")) || [];
+  function shopface(){
+    window.location.href="face.html"
+  }
+  function shopbest(){
+    window.location.href="best.html"
+  }
+  function shopnew(){
+    window.location.href="new.html"
+  }
+  function shopskin(){
+    window.location.href="skincare.html"
+  }
+  function scrolltop(){
+    document.documentElement.scrollTop = 0;
+  }
+  function bookcall(){
+    window.location.href="https://zoom.us/";
+  }
+  function signupclose() {
+    document.querySelector("#signupdiv").style.display = "none";
+  }
+  function displayform() {
+    document.querySelector("#signupdiv").style.display = "block";
+  }
+  function displaysignin() {
+    document.querySelector("#signincont").style.display = "block";
+  }
+
+  document.querySelector("#signupform").addEventListener("submit", savesignup);
+  function savesignup(event) {
+    event.preventDefault();
+    var signupobj = {
+      email: signupform.signupemail.value,
+      password: signupform.signuppassword.value,
+      month: signupform.signupmonth.value,
+      day: signupform.signupday.value,
+    };
+    signuparr.push(signupobj);
+    localStorage.setItem("signupdata", JSON.stringify(signuparr));
+    signupform.signupemail.value = "";
+    signupform.signuppassword.value = "";
+    signupform.signupmonth.value = "";
+    signupform.signupday.value = "";
+    document.querySelector("#signupdiv").style.display = "none";
+  }
+  document.querySelector("#signinform").addEventListener("submit", checkdetail);
+  function checkdetail(event) {
+    event.preventDefault();
+    var email = document.querySelector("#signinemail").value;
+    var password = document.querySelector("#signinpassword").value;
+    var x = true;
+    for (i = 0; i < signuparr.length; i++) {
+      if (email == signuparr[i].email && password == signuparr[i].password) {
+        window.location.href = "product.html";
+        alert("login successful");
+        x = false;
+        break;
+      }
+    }
+    if (x) {
+      alert("wrong credientails");
+    }
+    var email = null;
+    var password = null;
+    document.querySelector("#signincont").style.display = "none";
+  }
+
+  var data = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E1LM01_600x600_0.jpg",
+      name: "VITAMIN ENRICHED FACE BASE",
+      tag: "Multi Tasking Moisturizing primer",
+      price: "64",
+      category: "TRENDING",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ENPT01_600x600_1.jpg",
+      name: "SHEER FINISH PRESSED POWDER",
+      tag: "Oil-absorbing setting powder",
+      price: "44",
+      category: "TRENDING",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EMCK07_600x600_1.jpg",
+      name: "CRUSHED OIL INFUSED GLOSS",
+      tag: "non sticku hydrating lip gloss",
+      price: "29",
+      category: "TRENDING",
+    },
+  ];
+  var slidingdatanew = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E9TN01_600x600_1.jpg",
+      name: "SMOKEY EYE MASACARA",
+      tag: "Mascara for volume and length",
+      price: "32",
+      category: "NEW",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EME717_600x600_1.jpg",
+      name: "INTENSIVE SERUM",
+      tag: "Radiance Boosting",
+      price: "72",
+      category: "NEW",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ERJ2Y1_600x600_0.jpg",
+      name: "EYE SHADOW PELLATE",
+      tag: "Mascara for volume and length",
+      price: "65",
+      category: "NEW",
+    },
+  ];
+  var slidingdataskin = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E1LM01_600x600_0.jpg",
+      name: "VITAMIN ENRICHED FACE BASE",
+      tag: "Multi Tasking Moisturizing primer",
+      price: "64",
+      category: "SKIN",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E1LM01_600x600_0.jpg",
+      name: "VITAMINE ENRICHED EYE BASE",
+      tag: "under-eye moisturising primer",
+      price: "44",
+      category: "SKIN",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E1LM01_600x600_0.jpg",
+      name: "SOOTHING CLENCING OIL",
+      tag: "makeup remover and face cleaner",
+      price: "29",
+      category: "SKIN",
+    },
+  ];
+  data.map(function (elem) {
+    var img = document.createElement("img");
+    img.src = elem.imgUrl;
+    var h2 = document.createElement("h3");
+    h2.textContent = elem.name;
+    var fir = document.createElement("h3");
+    fir.textContent = elem.tag;
+    var h3 = document.createElement("h3");
+    h3.textContent ='$'+elem.price+'.00';
+    var but = document.createElement("button");
+    but.textContent = "Add to Cart";
+    but.addEventListener('click',function(){addingcart(elem)});
+    var divv = document.createElement("div");
+    divv.append(img, h2, fir, h3, but);
+    document.querySelector("#cont").append(divv);
+  });
+  document
+    .querySelector("#slidingtrend")
+    .addEventListener("click", displaytrend);
+  function displaytrend() {
+    document.querySelector("#cont").textContent = "";
+    data.map(function (elem) {
+      var img = document.createElement("img");
+      img.src = elem.imgUrl;
+      var h2 = document.createElement("h3");
+      h2.textContent = elem.name;
+      var fir = document.createElement("h3");
+      fir.textContent = elem.tag;
+      var h3 = document.createElement("h3");
+      h3.textContent ='$'+elem.price+'.00';
+      var but = document.createElement("button");
+      but.textContent = "Add to Cart";
+      but.addEventListener('click',function(){addingcart(elem)});
+      var divv = document.createElement("div");
+      divv.append(img, h2, fir, h3, but);
+      document.querySelector("#cont").append(divv);
+    });
+  }
+  document.querySelector("#slidingnew").addEventListener("click", displaynew);
+  function displaynew() {
+    document.querySelector("#cont").textContent = "";
+    slidingdatanew.map(function (elem) {
+      var img = document.createElement("img");
+      img.src = elem.imgUrl;
+      var h2 = document.createElement("h3");
+      h2.textContent = elem.name;
+      var fir = document.createElement("h3");
+      fir.textContent = elem.tag;
+      var h3 = document.createElement("h3");
+      h3.textContent ='$'+elem.price+'.00';
+      var but = document.createElement("button");
+      but.textContent = "Add to Cart";
+      but.addEventListener('click',function(){addingcart(elem)});
+      var divv = document.createElement("div");
+      divv.append(img, h2, fir, h3, but);
+      document.querySelector("#cont").append(divv);
+    });
+  }
+  document.querySelector("#slidingskin").addEventListener("click", displayskin);
+  function displayskin() {
+    document.querySelector("#cont").textContent = "";
+    slidingdataskin.map(function (elem) {
+      var img = document.createElement("img");
+      img.src = elem.imgUrl;
+      var h2 = document.createElement("h3");
+      h2.textContent = elem.name;
+      var fir = document.createElement("h3");
+      fir.textContent = elem.tag;
+      var h3 = document.createElement("h3");
+      h3.textContent ='$'+elem.price+'.00';
+      var but = document.createElement("button");
+      but.textContent = "Add to Cart";
+      but.addEventListener('click',function(){addingcart(elem)});
+      var divv = document.createElement("div");
+      divv.append(img, h2, fir, h3, but);
+      document.querySelector("#cont").append(divv);
+    });
+  }
+  var presentdata = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EE1Y06_600x600_1.jpg",
+      name: "VITAMIN ENRICHED FACE BASE",
+      tag: "Multi Tasking Moisturizing primer",
+      price: "64",
+      category: "TRENDING",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_EJ0R01_600x600_1.jpg",
+      name: "SHEER FINISH PRESSED POWDER",
+      tag: "Oil-absorbing setting powder",
+      price: "44",
+      category: "TRENDING",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_ERJ2Y1_600x600_0.jpg",
+      name: "CRUSHED OIL INFUSED GLOSS",
+      tag: "non sticku hydrating lip gloss",
+      price: "29",
+      category: "TRENDING",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/products/600x600/bb_sku_E10002_600x600_1.jpg",
+      name: "CRUSHED OIL INFUSED GLOSS",
+      tag: "non sticku hydrating lip gloss",
+      price: "29",
+      category: "TRENDING",
+    },
+  ];
+  presentdata.map(function (elem) {
+    var img = document.createElement("img");
+    img.src = elem.imgUrl;
+    var h2 = document.createElement("h3");
+    h2.textContent = elem.name;
+    var fir = document.createElement("h3");
+    fir.textContent = elem.tag;
+    var h3 = document.createElement("h3");
+    h3.textContent ='$'+elem.price+'.00';
+    var but = document.createElement("button");
+    but.textContent = "Add to bag";
+    but.addEventListener('click',function(){addingcart(elem)});
+    var divv = document.createElement("div");
+    divv.style.width = "180px";
+    divv.style.height = "400px";
+    divv.append(img, h2, fir, h3, but);
+    document.querySelector("#presentitems").append(divv);
+  });
+  var holiday = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210808_BB_Holiday_OCT_Gnav.jpg",
+      name: "EXPLORE GIFT GUIDE",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210808_BB_Holiday_DEC_Gnav.jpg",
+      name: "SHOP ALL GIFTS",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/bb-desktop-gnav-tile-palettes_@2x.jpg",
+      name: "HOLIDAY PALETTES & SETS",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/bb-desktop-gnav-tile-minibar_@2x.jpg",
+      name: "HOLIDAY MINI",
+    },
+  ];
+  var newpop = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210811_BB_FY21_LuxeDefiningLipstick_Engage_Product_ShadeRange_NA_GNAV_600x300.jpg",
+      name: "SHOP ALL NEW",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/FY22_12_Days_of_Bobbi_Brown_Global_Template_PC_GNAV.jpg",
+      name: "OFFERS AND SERVICES",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_ExtraSkincare_Relaunch_GNAV.jpg",
+      name: "SKINCARE FAVOURITES",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210808_BB_Holiday_NOV_Gnav.jpg",
+      name: "HOLIDAY GIFT GUIDE",
+    },
+  ];
+  var best = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-01-B_@2x.jpg",
+      name: "SHOP ALL BESTSELLERS",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-LWCSS_450x300_@2x.jpg",
+      name: "LONG-WEAR CREAM SHADOW STICK",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-Highlighters_450x300_@2x.jpg",
+      name: "HIGHLIGHTING POWDER",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-04-B_@2x.jpg",
+      name: "PELETTES AND SETS",
+    },
+  ];
+  function displayhpop(num) {
+    if (num == 1) {
+      poping(holiday, num);
+    }
+    if (num == 2) {
+      poping(newpop,num);
+    }
+    if (num == 3) {
+      poping(best,num);
+    }
+    if (num == 4) {
+      poping(holiday, num);
+    }
+    if (num == 5) {
+      poping(newpop,num);
+    }
+    if (num == 6) {
+      poping(best,num);
+    }
+    if (num == 7) {
+      poping(newpop,num);
+    }
+    if (num == 8) {
+      poping(best,num);
+    }
+  }
+  function poping(arr, num) {
+    document.querySelector("#holidaypop").textContent = "";
+    arr.map(function (elem) {
+      var img = document.createElement("img");
+      img.src = elem.imgUrl;
+      var fir = document.createElement("h4");
+      fir.textContent = elem.name;
+
+      var divv = document.createElement("div");
+      divv.append(img, fir);
+      divv.addEventListener("click", function () {
+        if (num == 1) {
+          window.location.href = "holiday.html";
+        }
+        if (num == 2) {
+          window.location.href = "new.html";
+        }
+        if (num == 3) {
+          window.location.href = "best.html";
+        }
+        if (num == 4) {
+          window.location.href = "face.html";
+        }
+        if (num == 5) {
+          window.location.href = "makeup.html";
+        }
+        if (num == 6) {
+          window.location.href = "skincare.html";
+        }
+        if (num == 7) {
+          window.location.href = "virtual.html";
+        }
+        if (num == 8) {
+          window.location.href = "discover.html";
+        }
+      });
+      document.querySelector("#holidaypop").append(divv);
+
+      document.querySelector("#holidaypop").style.display = "flex";
+    });
+    var button = document.createElement("button");
+    button.textContent = "close";
+    document.querySelector("#holidaypop").append(button);
+    button.addEventListener("click", function () {
+      document.querySelector("#holidaypop").style.display = "none";
+    });
+  }
+  function addingcart(elem){
+    cart.push(elem);
+    localStorage.setItem('cartproducts',JSON.stringify(cart));
+  }
+</script>

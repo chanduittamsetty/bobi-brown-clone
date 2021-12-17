@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bobbibrowncosmetics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      * {
+        font-family: sans-serif;
+      }
+      #header {
+        width: 100%;
+        height: 150px;
+
+        color: whitesmoke;
+        
+      }
+      #navtop {
+        width: 100%;
+        height: 90px;
+        /* border: 2px solid yellow; */
+        display: flex;
+        color: white;
+        background-color: black;
+      }
+      #navsignup {
+        width: 15%;
+        padding-top: 20px;
+        padding-left: 50px;
+        cursor: pointer;
+      }
+      #navname {
+        width: 60%;
+        font-size: 45px;
+        text-align: center;
+        padding-top: 15px;
+        padding-left: 10%;
+      }
+      #navlogo {
+        width: 25%;
+        display: flex;
+      }
+      #navbbaccess {
+        padding-top: 20px;
+        cursor: pointer;
+      }
+      .logosmall {
+        width: 20px;
+        height: 20px;
+        padding-top: 20px;
+        padding-left: 15px;
+        cursor: pointer;
+      }
+      .logosmall:hover,
+      #navsignup:hover,
+      #navbbaccess:hover {
+        opacity: 0.8;
+      }
+      #navsearchinput {
+        width: 170px;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        font-size: 15px;
+        letter-spacing: 0.75px;
+        border-bottom: 2px solid white;
+        color: white;
+      }
+      #navsearchinput:focus {
+        border-bottom: none;
+      }
+      #navbot {
+        display: flex;
+        width: 100%;
+        height: 60px;
+        /* border: 2px solid yellow; */
+        background-color: black;
+        position:sticky ;
+        top:0px;
+        color: white;
+      }
+      #navoptions {
+        display: flex;
+        gap: 35px;
+        padding-left: 15px;
+        padding-top: 20px;
+        /* border: 1px solid yellow; */
+      }
+      .options:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      #holiday {
+        color: rgb(247, 114, 6);
+      }
+      #signupdiv {
+        width: 350px;
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        top: 50px;
+        left: 60px;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      #signupform {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
+        line-height: 25px;
+      }
+      #signupform > input {
+        display: inline;
+        margin: 5px 10px 5px 0;
+        padding: 5px;
+        background-color: #fff;
+        border: 1px solid rgb(197, 197, 197);
+        margin-bottom: 10px;
+      }
+      #signupform > select {
+        width: 45%;
+        display: inline;
+        height: 30px;
+      }
+
+      #footer {
+        width: 100%;
+        min-height: 400px;
+        background-color: black;
+        /* border: 2px solid yellow; */
+        margin-top: 20px;
+        color: white;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        justify-content: space-evenly;
+        margin-bottom: 0px;
+      }
+      #footer > div {
+        padding-left: 50px;
+        padding-top: 100px;
+      }
+      #footer select {
+        padding: 10px 15px;
+        background-color: black;
+        color: white;
+        border: 2px dotted cyan;
+      }
+      #footerform > input {
+        display: block;
+        margin-top: 25px;
+        padding: 10px 25px;
+        width: 100%;
+        color: white;
+        background-color: black;
+        border: solid white;
+      }
+      #footericon {
+        display: flex;
+      }
+      .fa:hover {
+        opacity: 0.9;
+      }
+
+      .fa-linkedin {
+        background: #007bb5;
+        color: white;
+      }
+
+      .fa-pinterest {
+        background: #cb2027;
+        color: white;
+      }
+
+      .fa-reddit {
+        background: #ff5700;
+        color: white;
+      }
+
+      .fa {
+        padding: 20px;
+        /* font-size: 40px; */
+        width: 20px;
+        text-decoration: none;
+        margin: 20px;
+      }
+      #rights {
+        display: grid;
+        width: 100%;
+        background-color: black;
+        color: white;
+        grid-template-columns: 50% 50%;
+      }
+      #rights > div {
+        /* width: 50%; */
+        font-size: 15px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        /* border: 2px solid yellow; */
+      }
+      #rights > button {
+        border: none;
+      }
+      #floaticon {
+        margin-left: 90%;
+        text-align: right;
+      }
+      .sticky {
+        position: fixed;
+        display: block;
+        bottom: 20px;
+      }
+      .stickychat {
+        position: fixed;
+        display: block;
+        bottom: 100px;
+      }
+      #signincont {
+        /* width: 350px; */
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 250px;
+        top: 160px;
+        right: 0px;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        color: black;
+      }
+      #signinform {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-items: stretch;
+        line-height: 25px;
+      }
+      #signinform > input {
+        margin: 5px 10px 5px 10px;
+        background-color: #fff;
+        border: 1px solid rgb(197, 197, 197);
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      #signinform > input[type="submit"] {
+        background-color: black;
+        color: white;
+      }
+      .fourboxcont {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        background-color: white;
+        top: 60px;
+        right: 0px;
+        padding: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        color: black;
+        min-height: 250px;
+        justify-content: space-evenly;
+      }
+      .fourboxcont > div {
+        width: 22%;
+        /* border: 2px solid yellow; */
+        height: 100%;
+      }
+      #holidaypop > div > img {
+        width: 100%;
+      }
+      #holidaypop {
+        display: none;
+      }
+      #navboticoncont{
+        margin-top: 0px;
+        padding-top: 0px;
+        height: 60px;
+        display: flex;
+        margin-bottom: 50px;
+        /* border: 2px solid red; */
+      }
+      #signin,#cart {
+        padding-top:0px;
+        padding-left: 30px;
+        width: 28px;
+        height: 28px;
+      }
+      button {
+        padding: 10px 15px 10px 15px;
+        background-color: black;
+        color: white;
+        border: none;
+      }
+      #maincont {
+          width: 80%;
+          display: flex;
+          margin: auto;
+          margin-top: 50px;
+      }
+      #items{
+          width: 60%;
+          /* border: 2px solid yellow; */
+      }
+      #promo{
+          width: 40%;
+          max-height: 500px;
+          /* border: 2px solid red; */
+          background-color: #eff0f0;
+          padding:10px;
+      }
+      #bgimg{
+          height: 120px;
+          background-image:url('https://images.pexels.com/photos/1631677/pexels-photo-1631677.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') ;
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+      .pad{
+          padding-left: 25px;
+          vertical-align:middle
+      }
+      table{
+          border-collapse: collapse;
+      }
+      tr{
+          border-bottom: 2px solid black;
+      }
+      .tableimg{
+          width: 150px;
+      }
+      select{
+        width: 50px;
+        margin-top: 62px;
+        height: 25px;
+      }
+      select:hover{
+        border-color: red;
+      }
+      button:hover{
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      #carttotal{
+        font-weight: bolder;
+      }
+      #subtotaldiv{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-left: 30px;
+      }
+      #discountdiv{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-left: 30px;
+      }
+      #estimateddiv{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-left: 30px;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <div id="main">
+        <div id="navtop">
+          <div id="navsignup" onclick="displayform()">EMAIL SIGN UP</div>
+          <div id="navname">BOBBI BROWN</div>
+          <div id="navlogo">
+            <div id="navbbaccess">
+              JOIN BB<span><u>ACCESS</u></span>
+            </div>
+            <div>
+              <img
+                id="storelocator"
+                class="logosmall"
+                src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Location-White.svg"
+                alt=""
+              />
+            </div>
+          
+          </div>
+        </div>
+        <div id="signincont">
+          <form id="signinform" action="">
+            <h2>Login</h2>
+            <input type="email" id="signinemail" placeholder="Enter email" />
+            <input
+              type="text"
+              id="signinpassword"
+              placeholder="Enter Password"
+            />
+            <a href="#">Forgot Password?</a>
+            <input type="submit" value="LOG IN" />
+          </form>
+        </div>
+        <div id="navbot">
+          <div id="navsearch">
+            <span
+              ><u
+                ><img
+                  id="searchlogo"
+                  class="logosmall"
+                  src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Search-White.svg"
+                  alt="" /></u
+            ></span>
+            <u
+              ><input id="navsearchinput" type="text" placeholder="SEARCH"
+            /></u>
+          </div>
+          <div id="navoptions">
+            <div id="holiday" class="options" onclick="displayhpop(1)">
+              HOLIDAY
+            </div>
+            <div id="new" class="options" onclick="displayhpop(2)">NEW</div>
+            <div id="bestsellers" class="options" onclick="displayhpop(3)">
+              BESTSELLERS
+            </div>
+            <div id="face" class="options" onclick="displayhpop(4)">FACE</div>
+            <div id="makeup" class="options" onclick="displayhpop(5)">
+              MAKEUP
+            </div>
+            <div id="skincare" class="options" onclick="displayhpop(6)">
+              SKINCARE
+            </div>
+            <div id="virtual" class="options" onclick="displayhpop(7)">
+              VIRTUAL SERVICES
+            </div>
+            <div id="discover" class="options" onclick="displayhpop(8)">
+              DISCOVER
+            </div>
+              <div style="margin-bottom: 30px;">
+              <img
+                id="signin"
+                class="logosmall"
+                onclick="displaysignin()"
+                src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/MyAccount-White.svg"
+                alt=""
+              />
+            </div style="padding-bottom: 30px;">
+            <div>
+              <img
+                id="cart"
+                class="logosmall"
+                src="https://www.bobbibrowncosmetics.com/sites/bobbibrown/themes/bb_base/img/icons/svg/Bag-White.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div id="holidaypop" class="fourboxcont"></div>
+        </div>
+      <div id="signupdiv">
+        <h1>SIGN UP NOW</h1>
+        <h3 style="padding-left: 10px">
+          Sign up for emails and be the first to know about exclusive offers,
+          pre-sales, new collections and more.
+        </h3>
+        <form id="signupform" action="">
+          <input type="email" id="signupemail" placeholder="Enter Email" />
+          <input type="text" id="signuppassword" placeholder="enterpassword" />
+          <label for="">We love birthdays</label>
+          <label for=""
+            >Tell us your birthday and we'll send you a special surprise on your
+            big day.</label
+          >
+          <select name="month" id="signupmonth">
+            <option value="">Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+          <select name="day" id="signupday">
+            <option value="">Day</option>
+            <option value="01">1</option>
+            <option value="02">2</option>
+            <option value="03">3</option>
+            <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
+          <input type="submit" value="SIGN UP" />
+          <button
+            style="background-color: rgb(245, 88, 88); color: white"
+            id="signupclose"
+            onclick="closesignup()"
+          >
+            CLOSE
+          </button>
+        </form>
+      </div>
+      <div id='maincont'>
+          <div id='items'>
+              <div id='bgimg'>
+                  <h2 style="margin-top: 0px;padding-top: 30px;">TODAYS PROMO TO GET 30% OFF ON CART VALUE:</h2>
+                    <h2 style="color: red">" BB30OFF "</h2>
+              </div>
+              <h2 class="pad">SHOPPING BAG</h2>
+              <hr style="border: 2px solid black;margin-bottom: 0px;">
+              <div class="pad" style="height: 70px;background-color: grey;margin-top: 0px;border-top: 1px solid">
+               <p style="padding-top: 10px;"> Enjoy Free Standard Shipping on all orders all holiday season long.</p>
+            </div>
+            <p>Good news! Your Shopping Bag qualifies you for one or more of our</p>
+               <p>Limited Edition Offers. Proceed to Checkout to select your Offer(s).</p> 
+               <table>
+                   <thead>
+                       <tr>
+                           <td style="width: 55%;"><b>PRODUCT</b></td>
+                           <td style="width: 17%;"><b>QUANTITY</b></td>
+                           <td style="width: 15%;"><b>PRICE</b></td>
+                           <td style="width:80px"><b>TOTAL</b></td>
+                         </tr>
+                   </thead>
+                   <tbody id="tbody">
+
+                   </tbody>
+               </table>
+               <table>
+                 <thead>
+                   <tr>
+                    <td style="width: 55%;"><b></b></td>
+                    <td style="width: 17%;"><b></b></td>
+                    <td style="width: 15%;"><b>ESTIMATED TOTAL</b></td>
+                    <td id="carttotal" style="width:80px"><b></b></td>
+                   </tr>
+
+                 </thead>
+               </table>
+          </div>
+          <div id='promo'>
+            <h2 class="pad">BB<span><u>ACCESS</u></span> REWARDS</h2>
+            <hr>
+            <h2 class="pad">OFFER CODE</h2>
+            <hr>
+            <input style="margin-left: 30px;padding-top: 10px;" id="promocode" type="text" placeholder="Offer Code">
+            <p class="pad">One Offer code per order</p>
+            <button id="applypromo" style="margin-left: 30px;">APPLY</button>
+            <div id="subtotaldiv">
+              <span>SUB TOTAL</span>
+              <span id="subtotal"></span>
+            </div>
+            <div id="discountdiv">
+              <span>DISCOUNT</span>
+              <span id="discount"></span>
+            </div>
+            <div id="estimateddiv">
+              <span>ESTIMATED TOTAL</span>
+              <span id="estimate"></span>
+            </div>
+            <hr>
+            <button id="checkout" style="margin-left:60%;">CHECK OUT</button>
+          </div>
+      </div>
+      <div id="rights">
+        <div>
+          © Bobbi Brown Professional Cosmetics, Inc. All worldwide rights
+          reserved.
+        </div>
+        <div>
+          <button>terms and condtions</button>
+          <button>Intrest based Ads</button>
+          <button>
+            California donot sell my Privacy Policy Personal Information
+          </button>
+          <button>Accessiability</button>
+        </div>
+      </div>
+      <div id="floaticon">
+        <div>
+          <img
+            class="stickychat"
+            width="100px"
+            src="https://www.bobbibrowncosmetics.com/media/export/cms/live_chat/icon-livechat_@2x.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="sticky"
+            width="60px"
+            src="https://www.bobbibrowncosmetics.com/media/images/global/icon-backtotop.png"
+            alt=""
+          />
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
+<script>
+  var cart=JSON.parse(localStorage.getItem("cartproducts")) || [];
+  var signuparr = JSON.parse(localStorage.getItem("signupdata")) || [];
+  function closesignup() {
+    document.querySelector("#signupdiv").style.display = "none";
+  }
+  function displayform() {
+    document.querySelector("#signupdiv").style.display = "block";
+  }
+  function displaysignin() {
+    document.querySelector("#signincont").style.display = "block";
+  }
+
+  document.querySelector("#signupform").addEventListener("submit", savesignup);
+  function savesignup(event) {
+    event.preventDefault();
+    var signupobj = {
+      email: signupform.signupemail.value,
+      password: signupform.signuppassword.value,
+      month: signupform.signupmonth.value,
+      day: signupform.signupday.value,
+    };
+    signuparr.push(signupobj);
+    localStorage.setItem("signupdata", JSON.stringify(signuparr));
+    signupform.signupemail.value = "";
+    signupform.signuppassword.value = "";
+    signupform.signupmonth.value = "";
+    signupform.signupday.value = "";
+    document.querySelector("#signupdiv").style.display = "none";
+  }
+  document.querySelector("#signinform").addEventListener("submit", checkdetail);
+  function checkdetail(event) {
+    event.preventDefault();
+    var email = document.querySelector("#signinemail").value;
+    var password = document.querySelector("#signinpassword").value;
+    var x = true;
+    for (i = 0; i < signuparr.length; i++) {
+      if (email == signuparr[i].email && password == signuparr[i].password) {
+        window.location.href = "product.html";
+        alert("login successful");
+        x = false;
+        break;
+      }
+    }
+    if (x) {
+      alert("wrong credientails");
+    }
+    var email = null;
+    var password = null;
+    document.querySelector("#signincont").style.display = "none";
+  }
+  var holiday = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210808_BB_Holiday_OCT_Gnav.jpg",
+      name: "EXPLORE GIFT GUIDE",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210808_BB_Holiday_DEC_Gnav.jpg",
+      name: "SHOP ALL GIFTS",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/bb-desktop-gnav-tile-palettes_@2x.jpg",
+      name: "HOLIDAY PALETTES & SETS",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/bb-desktop-gnav-tile-minibar_@2x.jpg",
+      name: "HOLIDAY MINI",
+    },
+  ];
+  var newpop = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210811_BB_FY21_LuxeDefiningLipstick_Engage_Product_ShadeRange_NA_GNAV_600x300.jpg",
+      name: "SHOP ALL NEW",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/FY22_12_Days_of_Bobbi_Brown_Global_Template_PC_GNAV.jpg",
+      name: "OFFERS AND SERVICES",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/BB_ExtraSkincare_Relaunch_GNAV.jpg",
+      name: "SKINCARE FAVOURITES",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/new/20210808_BB_Holiday_NOV_Gnav.jpg",
+      name: "HOLIDAY GIFT GUIDE",
+    },
+  ];
+  var best = [
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-01-B_@2x.jpg",
+      name: "SHOP ALL BESTSELLERS",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-LWCSS_450x300_@2x.jpg",
+      name: "LONG-WEAR CREAM SHADOW STICK",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-GNAV-Highlighters_450x300_@2x.jpg",
+      name: "HIGHLIGHTING POWDER",
+    },
+    {
+      imgUrl:
+        "https://www.bobbibrowncosmetics.com/media/export/cms/nav_touts/bestsellers/BB-PC-Gnav-Tile-04-B_@2x.jpg",
+      name: "PELETTES AND SETS",
+    },
+  ];
+  function displayhpop(num) {
+    if (num == 1) {
+      poping(holiday, num);
+    }
+    if (num == 2) {
+      poping(newpop,num);
+    }
+    if (num == 3) {
+      poping(best,num);
+    }
+    if (num == 4) {
+      poping(holiday, num);
+    }
+    if (num == 5) {
+      poping(newpop,num);
+    }
+    if (num == 6) {
+      poping(best,num);
+    }
+    if (num == 7) {
+      poping(newpop,num);
+    }
+    if (num == 8) {
+      poping(best,num);
+    }
+  }
+  function poping(arr, num) {
+    document.querySelector("#holidaypop").textContent = "";
+    arr.map(function (elem) {
+      var img = document.createElement("img");
+      img.src = elem.imgUrl;
+      var fir = document.createElement("h4");
+      fir.textContent = elem.name;
+
+      var divv = document.createElement("div");
+      divv.append(img, fir);
+      divv.addEventListener("click", function () {
+        if (num == 1) {
+          window.location.href = "holiday.html";
+        }
+        if (num == 2) {
+          window.location.href = "new.html";
+        }
+        if (num == 3) {
+          window.location.href = "best.html";
+        }
+        if (num == 4) {
+          window.location.href = "face.html";
+        }
+        if (num == 5) {
+          window.location.href = "makeup.html";
+        }
+        if (num == 6) {
+          window.location.href = "skincare.html";
+        }
+        if (num == 7) {
+          window.location.href = "virtual.html";
+        }
+        if (num == 8) {
+          window.location.href = "discover.html";
+        }
+      });
+      document.querySelector("#holidaypop").append(divv);
+
+      document.querySelector("#holidaypop").style.display = "flex";
+    });
+    var button = document.createElement("button");
+    button.textContent = "close";
+    document.querySelector("#holidaypop").append(button);
+    button.addEventListener("click", function () {
+      document.querySelector("#holidaypop").style.display = "none";
+    });
+  }
+  displaycart();
+  function displaycart(){
+    document.querySelector('#tbody').textContent="";
+cart.map(function(elem,index){
+    if(elem.qty== undefined){
+      elem.qty=1;
+      cart[index]=elem;
+      localStorage.setItem('cartproducts',JSON.stringify(cart));
+    };
+    var img=document.createElement('img');
+    img.src=elem.imgUrl;
+    img.className="tableimg";
+    var name=document.createElement('h4');
+    name.textContent=elem.name;
+    var remove=document.createElement('button');
+    remove.textContent='Remove';
+    remove.addEventListener('click',function(){
+      removingcartitem(index);
+      changetotal();
+    })
+    var textdiv=document.createElement('div');
+    textdiv.append(name,remove);
+    var imgdiv=document.createElement('div');
+    imgdiv.style.display="flex";
+    imgdiv.append(img,textdiv);
+    var td1=document.createElement('td');
+    td1.append(imgdiv);
+    var td2=document.createElement('select');
+    for( var i=1;i<7;i++){
+        var opt=document.createElement('option');
+        opt.textContent=i;
+        td2.add(opt);
+    }
+    var x=elem.qty;
+    td2.value=elem.qty;
+    td2.addEventListener('change',function(){
+        changerow(td2.value);
+        changetotal();
+    });
+    var x=elem.qty;
+    
+    var td3=document.createElement('td');
+    td3.textContent='$'+elem.price+'.00';
+    var td4=document.createElement('td');
+    td4.textContent='$'+x*elem.price+'.00';
+    var row=document.createElement('tr');
+    
+    row.append(td1,td2,td3,td4);
+    document.querySelector('#tbody').append(row);
+    function changerow(x){
+        td4.textContent='$'+x*elem.price+'.00';
+        elem.qty=x;
+        cart[index]=elem;
+      localStorage.setItem('cartproducts',JSON.stringify(cart));
+    }
+}) 
+  }
+  function removingcartitem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cartproducts", JSON.stringify(cart));
+    displaycart();
+  }
+  function changetotal(){
+    document.querySelector('#carttotal')
+    var sum=0;
+    cart.map(function(elem){
+      sum=sum+(elem.qty*elem.price);
+    })
+    document.querySelector('#carttotal').textContent='$'+sum+'.00';
+    document.querySelector('#subtotal').textContent='$'+sum+'.00';
+    var y=Math.round(30/100*sum);
+        localStorage.setItem('discount',y);
+        var t=Math.round(sum-y);
+        localStorage.setItem('estimate',t);
+  }
+  var sum=0;
+  cart.map(function(elem){
+      sum=sum+(elem.qty*elem.price);
+    })
+    document.querySelector('#carttotal').textContent='$'+sum+'.00';
+    document.querySelector('#subtotal').textContent='$'+sum+'.00';
+    var y=Math.round(30/100*sum);
+        localStorage.setItem('discount',y);
+        var t=Math.round(sum-y);
+        localStorage.setItem('estimate',t);
+
+
+
+    document.querySelector('#applypromo').addEventListener('click',function(){
+      var pr=document.querySelector('#promocode').value;
+      if(pr=="BB30OFF"){
+        yt=localStorage.getItem('discount');
+        ts=localStorage.getItem('estimate');
+       document.querySelector('#discount').textContent='$'+yt+'.00';
+       document.querySelector('#estimate').textContent='$'+ts+'.00';
+      }
+    });
+
+    document.querySelector('#checkout').addEventListener('click',function(){
+      window.location.href="checkout.html";
+    })
+</script>
