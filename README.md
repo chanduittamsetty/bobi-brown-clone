@@ -4,11 +4,11 @@ Bobbi brown clone. The applications front-end is made with HTML ,CSS and Data is
 this is a basic front-end application
 
 
-click on use this template 
+-->click on use this template 
 
 
-create a repo with this template
+-->create a repo with this template
 
-clone it and start working on it
+-->clone it and start working on it
 
-it runs locally on live server
+-->it runs locally on live server
